@@ -5,4 +5,9 @@ Rails.application.routes.draw do
   end
 
   get '/users' => 'users#index'
+
+  resources :users,
+    controller: 'users',
+    only: 'create'
+
 end
